@@ -1,156 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IT Courses</title>
-  <style>
-    body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: #f3f7fc;
-      margin: 0;
-      padding: 0;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LearnIT - LMS</title>
 
-    header {
-      background: linear-gradient(135deg, #004aad, #0073e6);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-      border-bottom-left-radius: 50px;
-      border-bottom-right-radius: 50px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    }
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f8ff;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: #004aad;
+  color: white;
+}
 
-    header p {
-      margin-top: 10px;
-      font-size: 1.1rem;
-      opacity: 0.9;
-    }
+nav h2 {
+  margin: 0;
+}
 
-    .container {
-      max-width: 1100px;
-      margin: 50px auto;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 25px;
-    }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
 
-    .course-card {
-      background: #fff;
-      padding: 25px;
-      border-radius: 20px;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.08);
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-      text-align: center;
-    }
+nav ul li {
+  cursor: pointer;
+}
 
-    .course-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-    }
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #004aad, #00aaff);
+  color: white;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
 
-    .course-icon {
-      width: 70px;
-      height: 70px;
-      margin: 0 auto 15px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #004aad, #00aaff);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 32px;
-      color: white;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
+.hero h1 {
+  font-size: 3rem;
+}
 
-    .course-title {
-      font-size: 1.4rem;
-      font-weight: bold;
-      color: #004aad;
-      margin-bottom: 10px;
-    }
+.hero p {
+  margin: 15px 0;
+  font-size: 1.2rem;
+}
 
-    .course-desc {
-      font-size: 1rem;
-      color: #555;
-      margin-bottom: 20px;
-      line-height: 1.5;
-      padding: 0 10px;
-    }
+.hero button {
+  padding: 12px 25px;
+  border: none;
+  background: white;
+  color: #004aad;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
 
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      background: linear-gradient(135deg, #004aad, #0073e6);
-      color: white;
-      padding: 10px 22px;
-      border-radius: 30px;
-      font-size: 0.95rem;
-      transition: 0.3s;
-      font-weight: 500;
-    }
+/* ABOUT */
+.about {
+  padding: 50px 20px;
+  text-align: center;
+}
 
-    .btn:hover {
-      background: linear-gradient(135deg, #00337a, #005bb5);
-      transform: scale(1.07);
-    }
-  </style>
-  <!-- Using FontAwesome for icons -->
-  <script src="https://kit.fontawesome.com/2b5d5a9c8f.js" crossorigin="anonymous"></script>
+.about h2 {
+  color: #004aad;
+}
+
+.about p {
+  max-width: 700px;
+  margin: auto;
+  color: #555;
+}
+
+/* COURSES */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+.course-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+}
+
+.course-icon {
+  font-size: 35px;
+  color: #004aad;
+}
+
+.course-title {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #004aad;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 60px 20px;
+  background: #004aad;
+  color: white;
+}
+
+.cta button {
+  padding: 12px 25px;
+  border: none;
+  background: white;
+  color: #004aad;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #002c6d;
+  color: white;
+}
+</style>
+
+<script src="https://kit.fontawesome.com/2b5d5a9c8f.js"></script>
 </head>
+
 <body>
 
-  <header>
-    <h1>IT Courses</h1>
-    <p>Upgrade your career with our industry-ready training programs</p>
-  </header>
+<!-- NAVBAR -->
+<nav>
+  <h2>LearnIT</h2>
+  <ul>
+    <li>Home</li>
+    <li>Courses</li>
+    <li>About</li>
+    <li>Contact</li>
+  </ul>
+</nav>
 
-  <div class="container">
-    <div class="course-card">
-      <div class="course-icon"><i class="fab fa-java"></i></div>
-      <div class="course-title">Java Full Stack Development</div>
-      <div class="course-desc">
-        Master Core Java, Spring Boot, Microservices, Angular, React & more to become a job-ready full-stack developer.
-      </div>
-      <a href="#" class="btn">Enroll Now</a>
-    </div>
+<!-- HERO -->
+<section class="hero">
+  <h1>Welcome to LearnIT</h1>
+  <p>Upgrade your skills with industry-ready courses</p>
+  <button>Get Started</button>
+</section>
 
-    <div class="course-card">
-      <div class="course-icon"><i class="fab fa-python"></i></div>
-      <div class="course-title">Python Full Stack Development</div>
-      <div class="course-desc">
-        Learn Python, Django, REST APIs, React, and advanced deployment strategies for real-world projects.
-      </div>
-      <a href="#" class="btn">Enroll Now</a>
-    </div>
+<!-- ABOUT -->
+<section class="about">
+  <h2>About LearnIT</h2>
+  <p>
+    LearnIT is a modern Learning Management System designed to help students
+    and professionals upgrade their skills with real-time projects, expert
+    mentors, and industry-focused courses.
+  </p>
+</section>
 
-    <div class="course-card">
-      <div class="course-icon"><i class="fas fa-cloud"></i></div>
-      <div class="course-title">DevOps with AWS</div>
-      <div class="course-desc">
-        Get hands-on with Docker, Kubernetes, Jenkins, Terraform & AWS Cloud to launch your DevOps career.
-      </div>
-      <a href="#" class="btn">Enroll Now</a>
-    </div>
+<!-- COURSES -->
+<section class="container">
 
-    <div class="course-card">
-      <div class="course-icon"><i class="fas fa-robot"></i></div>
-      <div class="course-title">Data Science & AI</div>
-      <div class="course-desc">
-        Become industry-ready with Machine Learning, Python, Deep Learning, NLP, and real-time data projects.
-      </div>
-      <a href="#" class="btn">Enroll Now</a>
-    </div>
+  <div class="course-card">
+    <div class="course-icon"><i class="fab fa-java"></i></div>
+    <div class="course-title">Java Full Stack</div>
+    <p>Spring Boot, Microservices, React & more</p>
+    <a href="#" class="btn">Enroll</a>
   </div>
+
+  <div class="course-card">
+    <div class="course-icon"><i class="fab fa-python"></i></div>
+    <div class="course-title">Python Full Stack</div>
+    <p>Django, APIs, React & deployment</p>
+    <a href="#" class="btn">Enroll</a>
+  </div>
+
+  <div class="course-card">
+    <div class="course-icon"><i class="fas fa-cloud"></i></div>
+    <div class="course-title">DevOps & AWS</div>
+    <p>Docker, Kubernetes, CI/CD pipelines</p>
+    <a href="#" class="btn">Enroll</a>
+  </div>
+
+  <div class="course-card">
+    <div class="course-icon"><i class="fas fa-robot"></i></div>
+    <div class="course-title">Data Science</div>
+    <p>AI, ML, Deep Learning & projects</p>
+    <a href="#" class="btn">Enroll</a>
+  </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Start Learning Today 🚀</h2>
+  <p>Join thousands of learners and boost your career</p>
+  <button>Join Now</button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 LearnIT | All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
